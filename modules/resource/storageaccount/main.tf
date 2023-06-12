@@ -14,3 +14,9 @@ resource "azurerm_storage_account" "storage_account" {
 
   tags = var.tags
 }
+
+resource "azurerm_storage_container" "storage_account_container" {
+  name = var.storage_account_container_name
+  storage_account_name = azurerm_storage_account.storage_account.name
+  container_access_type = var.container_access_type
+}

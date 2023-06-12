@@ -43,6 +43,15 @@ variable "subnet_ids" {
   type = list(string)
 }
 
+variable "storage_account_container_name" {
+  type = string
+}
+
+variable "container_access_type" {
+  type = string
+  default = "private"
+}
+
 variable "tags" {
   type = map(string)
   default = {
